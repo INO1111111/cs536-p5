@@ -1,0 +1,11 @@
+integer x.
+struct idk [
+    boolean a.
+]
+
+struct Point [
+    integer x.
+    integer y.
+    integer a.
+    struct idk lol.
+]
