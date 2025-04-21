@@ -1244,7 +1244,7 @@ class ReturnStmtNode extends StmtNode {
 
         if(this.t == null){
             if (!ft.isVoidType()) {
-                ErrMsg.fatal(myExp.lineNum(), myExp.charNum(), "Missing return value");
+                ErrMsg.fatal(0, 0, "Missing return value");
             }
             return;
         }
