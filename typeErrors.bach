@@ -48,3 +48,14 @@ void void_returning_fn[] [
 void other_void_fn[] [
     return void_returning_fn().
 ]
+
+integer h[] []
+
+integer g[integer x] []
+
+void main2[] [
+  h = 2 + TRUE.
+  h = 2.
+  h = g(1).
+  h = g.
+]
