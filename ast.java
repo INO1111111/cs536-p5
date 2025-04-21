@@ -1240,16 +1240,16 @@ class ReturnStmtNode extends StmtNode {
         if (myExp != null) {
             myExp.typeCheck();
             this.t = myExp.t;
-        } else {
-            this.t = new VoidType();
         }
 
-        if(!ft.isVoidType() && this.t.isVoidType()){
-            ErrMsg.fatal(myExp.lineNum(), myExp.charNum(), "Missing return value");
+        if(this.t == null){
+            if (!ft.isVoidType()) {
+                ErrMsg.fatal(myExp.lineNum(), myExp.charNum(), "Missing return value");
+            }
             return;
         }
 
-        if(ft.isVoidType() && !this.t.isVoidType()){
+        if(ft.isVoidType()){
             ErrMsg.fatal(myExp.lineNum(), myExp.charNum(), "Return value in void function");
             return;
         }

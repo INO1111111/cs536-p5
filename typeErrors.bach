@@ -40,3 +40,11 @@ void main[] [
     # don't give too many or too few error messages here 
     bbb = (aaa + TRUE) & (bbb < TRUE).
 ]
+
+void void_returning_fn[] [
+    return.
+]
+
+void other_void_fn[] [
+    return void_returning_fn().
+]
