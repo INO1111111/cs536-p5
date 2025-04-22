@@ -59,3 +59,19 @@ void main2[] [
   h = g(1).
   h = g.
 ]
+
+void main3[] [
+    disp <- f.
+    disp <- q.
+    disp <- R.
+    disp <- void_returning_fn().
+
+    input -> q.
+
+    f = f.
+    R = R.
+
+    R == R.
+    q == q.
+    void_returning_fn() == void_returning_fn().
+]

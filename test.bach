@@ -9,3 +9,66 @@ struct Point [
     integer a.
     struct idk lol.
 ]
+
+integer a.
+boolean b.
+string s.
+
+a = 1.
+b = TRUE.
+s = "hello".
+
+a = a + 3.
+b = ^b.
+b = (a < 3) & b.
+
+disp <- a.
+disp <- b.
+disp <- "ok".
+
+integer double[integer x] [
+    x = x + x.
+    return x.
+]
+
+integer timesThree[integer something] [
+    return something + something + something.
+]
+
+void testFuncs[] [
+    integer a.
+    a = 2.
+    disp <- double(a).
+    disp <- timesThree(3).
+    a = double(timesThree(a)).
+    disp <- a.
+]
+
+integer randomFn[boolean flag][
+    if (flag) {
+        return 42.
+    }
+    return 7 + 5.
+]
+
+void testStuff[] [
+    integer val.
+    boolean cond.
+    val = 5.
+    cond = FALSE.
+
+    if (cond) {
+        val = randomFn(TRUE).
+    } else {
+        val = randomFn(FALSE).
+    }
+
+    disp <- val.
+]
+
+void main2[] [
+    integer temp.
+    temp = double(3).
+    disp <- temp.
+    testStuff().
+]
